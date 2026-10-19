@@ -1,0 +1,12 @@
+# Dependencias orientativas; versiones no fijadas ni entorno global validado
+numpy
+pandas
+matplotlib
+seaborn
+scipy
+statsmodels
+scikit-learn
+openpyxl
+jupyterlab
+pillow
+graphviz
