@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="Modelo Orange - Prediccion de medicamento" description="Flujo base para comparar modelos de clasificacion usando drugs.csv">
+  <nodes>
+    <node id="0" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="File - drugs.csv" position="(100.0, 150.0)" />
+    <node id="1" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(280.0, 70.0)" />
+    <node id="2" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns - Drug target" position="(280.0, 230.0)" />
+    <node id="3" name="Tree" qualified_name="Orange.widgets.model.owtree.OWTreeLearner" project_name="Orange3" version="" title="Decision Tree" position="(500.0, 40.0)" />
+    <node id="4" name="Random Forest" qualified_name="Orange.widgets.model.owrandomforest.OWRandomForest" project_name="Orange3" version="" title="Random Forest recomendado" position="(500.0, 160.0)" />
+    <node id="5" name="SVM" qualified_name="Orange.widgets.model.owsvm.OWSVM" project_name="Orange3" version="" title="SVM" position="(500.0, 280.0)" />
+    <node id="6" name="kNN" qualified_name="Orange.widgets.model.owknn.OWKNNLearner" project_name="Orange3" version="" title="kNN" position="(500.0, 400.0)" />
+    <node id="7" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score - validacion cruzada" position="(760.0, 190.0)" />
+    <node id="8" name="Confusion Matrix" qualified_name="Orange.widgets.evaluate.owconfusionmatrix.OWConfusionMatrix" project_name="Orange3" version="" title="Confusion Matrix" position="(990.0, 125.0)" />
+    <node id="9" name="Predictions" qualified_name="Orange.widgets.evaluate.owpredictions.OWPredictions" project_name="Orange3" version="" title="Predictions - pacientes futuros" position="(990.0, 295.0)" />
+  </nodes>
+  <links>
+    <link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
+    <link id="1" source_node_id="0" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" />
+    <link id="2" source_node_id="2" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" />
+    <link id="3" source_node_id="2" sink_node_id="4" source_channel="Data" sink_channel="Data" enabled="true" />
+    <link id="4" source_node_id="2" sink_node_id="5" source_channel="Data" sink_channel="Data" enabled="true" />
+    <link id="5" source_node_id="2" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" />
+    <link id="6" source_node_id="2" sink_node_id="7" source_channel="Data" sink_channel="Data" enabled="true" />
+    <link id="7" source_node_id="3" sink_node_id="7" source_channel="Learner" sink_channel="Learner" enabled="true" />
+    <link id="8" source_node_id="4" sink_node_id="7" source_channel="Learner" sink_channel="Learner" enabled="true" />
+    <link id="9" source_node_id="5" sink_node_id="7" source_channel="Learner" sink_channel="Learner" enabled="true" />
+    <link id="10" source_node_id="6" sink_node_id="7" source_channel="Learner" sink_channel="Learner" enabled="true" />
+    <link id="11" source_node_id="7" sink_node_id="8" source_channel="Evaluation Results" sink_channel="Evaluation Results" enabled="true" />
+    <link id="12" source_node_id="4" sink_node_id="9" source_channel="Model" sink_channel="Predictors" enabled="true" />
+    <link id="13" source_node_id="2" sink_node_id="9" source_channel="Data" sink_channel="Data" enabled="true" />
+  </links>
+  <annotations>
+    <text id="0" rect="(65.0, 20.0, 720.0, 40.0)" font-family="Aptos" font-size="12">Abrir en Orange, cargar drugs.csv en File y verificar que Drug este como variable objetivo. Comparar modelos en Test and Score.</text>
+  </annotations>
+  <thumbnail />
+  <node_properties />
+</scheme>
