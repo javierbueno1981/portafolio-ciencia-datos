@@ -1,0 +1,10 @@
+ARCHIVOS PARA ADJUNTAR A LA TAREA
+
+1. Dashboard: archivo PBIX definitivo, con cuatro páginas.
+2. Guia_y_evidencias: PDF con enlace, instrucciones y cuatro capturas de Power BI Service.
+3. Enlace_informe: vínculo en texto para copiar en la plataforma.
+4. Captura_*: imágenes originales de las cuatro páginas publicadas.
+
+Puede adjuntar el ZIP completo si la plataforma lo permite. Si solicita archivos separados, extraiga este paquete y adjunte el PBIX y el PDF; copie también el enlace en el comentario. Las imágenes se incluyen además por separado como respaldo.
+
+La página Escenarios presenta una referencia fija de persistencia y sensibilidad de +/-10%; no corresponde al modelo de Machine Learning del entregable 6.

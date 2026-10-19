@@ -1,0 +1,5 @@
+INFORME PUBLICADO EN POWER BI SERVICE
+
+https://app.powerbi.com/links/piDVEykBDm?ctid=ee2480cb-8101-4ba7-8136-dc268f6f4434&pbi_source=linkShare&bookmarkGuid=3760a31e-3dbc-47eb-af6e-967b58f463e4
+
+Acceso: requiere iniciar sesión con una cuenta autorizada. El vínculo está configurado para personas de la organización; el acceso de un evaluador externo no ha sido confirmado. Se adjuntan el PBIX y las evidencias para facilitar la revisión.
